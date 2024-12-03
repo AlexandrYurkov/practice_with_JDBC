@@ -5,6 +5,7 @@ public class ChatService {
         System.out.println("Сервер чата запущен");
         DataSource dataSource = new DataSource("jdbc:sqlite:test.db");
 ////        DataSource dataSource = new DataSource("jdbc:h2:file:./date.db;MODE=PostgreSQL");
+        //тест
         try {
             dataSource.connect();
             DbMigrator migrator = new DbMigrator(dataSource);

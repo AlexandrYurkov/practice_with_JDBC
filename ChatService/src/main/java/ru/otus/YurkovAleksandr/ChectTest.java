@@ -3,7 +3,7 @@ package ru.otus.YurkovAleksandr;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
-
+//тестовый класс
 @RepositoryTable(title = "Test")
 public class ChectTest {
     @RepositoryIdField
@@ -37,16 +37,7 @@ public class ChectTest {
     }
 
     public String getTestAnnotation() {
-//        String tableName = ((RepositoryTable) cls.getAnnotation(RepositoryTable.class)).title();
-//        cachedFields = Arrays.stream(cls.getDeclaredFields())
-//                .filter(f -> f.isAnnotationPresent(RepositoryField.class))
-//                .filter(f -> !f.isAnnotationPresent(RepositoryIdField.class))
-//                .collect(Collectors.toList());
-//        for (Field f : cachedFields) { // TODO заменить на использование геттеров
-//            f.setAccessible(true);
-//        }
         List<Field> f = Arrays.stream(this.getClass().getDeclaredFields()).filter(a -> a.isAnnotationPresent(TestName.class)).toList();
-
         TestName a = f.get(0).getAnnotation(TestName.class);
         return a.Colum();
     }

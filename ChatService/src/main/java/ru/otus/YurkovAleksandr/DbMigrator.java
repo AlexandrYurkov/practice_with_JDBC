@@ -20,9 +20,7 @@ public class DbMigrator {
 
     public void migrate(String nameFile) throws IOException, SQLException {
 
-        //сделать проверку с добовление в базу нового файла. Во избежание повторной инцилизации таблиц
         // читаем файл dbinit.sql
-
         FileReader reader = new FileReader(nameFile);
         BufferedReader bufferedReader = new BufferedReader(reader);
         String line;

@@ -70,7 +70,7 @@ public class AbstractRepository<T> {
             throw new ORMException("Не удалось проинициализировать репозиторий для класса " + cls.getName());
         }
     }
-
+    //чтение всех полей, для проверки когда читаем из базы.
     private void Fields (){
         if(fields == null){
             this.fields = Arrays.stream(this.cls.getDeclaredFields())
